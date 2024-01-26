@@ -1,4 +1,4 @@
-const header = document.getElementById('header')
+import { header } from "./constants.js";
 
 const sticky = header.offsetTop;
 

@@ -4,20 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>TBC x USAID</title>
     <link rel="icon" href="favico.ico">
 </head>
 <body>
     <header class="flex" id="header">
+
+        <div class="burger" id="burger">
+            <div class="burger-bar block" id="burger-bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="Xmark none" id="Xmark">
+                <i class="fa-solid fa-x"></i>
+            </div>
+        </div>
+
         <h1><a href="#">logo</a></h1>
         <div class="nav" id="nav">
-            <ul class="flex">
+            <ul class="flex navItems" id="navItems">
                 <li><a href="#">მთავარი</a></li>
                 <li><a href="#">TBC IT</a></li>
                 <li><a href="#" class="active">TBC x USAID</a></li>
                 <li><a href="#">რისკები</a></li>
             </ul>
         </div>
+
     </header>
     <main>
         <div class="container">
@@ -34,9 +46,24 @@
             <h2>სასწავლო კურსები</h2>
             <div class="grid-container" id="gridContainer"></div>
         </div>
-        <div class="slider-container">
-            <h2>პროექტის პარტნიორები</h2>
-        </div>
+        <section class="tbcPartners">
+            <div class="tbcPartnersContainer">
+
+                <h2>პროექტის პარტნიორები</h2>
+
+                <div class="slider">
+                    <div class="slidesInnerContent"></div>
+                    <button type="button" class="PrevArrow">&#8249;</button>
+                    <button type="button" class="NextArrow">&#8250;</button>
+                </div>
+
+                <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </section>
         <div class="questions-container">
             <div class="q-c-header flex">
                 <h2>ხშირად დასმული კითხვები</h2>
@@ -88,7 +115,7 @@
     </main>
     <footer class="flex">
         <div class="rules">
-            <div class="logo">
+            <div class="tbcLogo">
                 <img src="img/footerimg.webp" alt="tbc logo">
             </div>
             <p>© 2023 ყველა უფლება დაცულია</p>
@@ -104,8 +131,11 @@
             </div>
         </div>
     </footer>
-    <script src="js/courses.js"></script>
-    <script src="js/header.js"></script>
-    <script src="js/question.js"></script>
+    <script  type="module" src="js/courses.js"></script>
+    <script  type="module" src="js/header.js"></script>
+    <script  type="module" src="js/question.js"></script>
+    <script  type="module" src="js/slider.js"></script>
+    <script  type="module" src="js/burger.js"></script>
+    <script  type="module" src="https://kit.fontawesome.com/0f065fd346.js" crossorigin="anonymous"></script>
 </body>
 </html>

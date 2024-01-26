@@ -1,0 +1,9 @@
+export const navItems = document.getElementById('navItems');
+export const burgerBar = document.getElementById("burger-bar");
+export const Xmark = document.getElementById("Xmark");
+export const gridContainer = document.getElementById('gridContainer') 
+export const header = document.getElementById('header')
+export const question1 = document.getElementById('question1');
+export const question2 = document.getElementById('question2');
+export const question3 = document.getElementById('question3');
+export const slidesContent = document.getElementsByClassName("slidesInnerContent")[0];

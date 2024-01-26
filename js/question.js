@@ -1,6 +1,4 @@
-const question1 = document.getElementById('question1');
-const question2 = document.getElementById('question2');
-const question3 = document.getElementById('question3');
+import { question1, question2, question3 } from "./constants.js";
 
 
 function toggleAnswerVisibility(clickedButton ,answerNumber) {

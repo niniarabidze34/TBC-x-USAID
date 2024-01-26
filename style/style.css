@@ -1,14 +1,14 @@
 
+/* Reset styles */
 *{
     margin: 0;
     padding: 0;
     list-style-type: none;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: sans;
-    font-family: geo;
-
 }
+
+/* font faces */
 @font-face {
     font-family: sans;
     src: url(../font/OpenSans-VariableFont_wdth\,wght.ttf);
@@ -21,13 +21,21 @@
     --firstColor: rgb(26, 30, 31);
     --secondColor:rgb(43, 43, 43);
     --thirdColor :rgb(22, 22, 22);
-    --fourthColor : 00AEF3;
+    --fourthColor : #00AEF3;
 }
+
+/* Common styles */
+body {
+    font-family: sans, geo;
+}
+
 .flex{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+/* Header styles */
 header{
     width: 100%;
     height: 80px;
@@ -39,6 +47,9 @@ header{
 }
 .transparent {
     background-color: rgba(26, 30, 31, 0.9)
+}
+.burger{
+    display: none;
 }
 
 header h1{
@@ -62,7 +73,11 @@ header h1 a{
 .nav ul .active{
     color: rgb(0, 173, 238);
 }
-/* --------------------------main ---------------------*/
+.burger-bar{
+    display: none;
+}
+
+/* --------------------------main code ---------------------*/
 .container{
     position: relative;
     width: 100%;
@@ -75,7 +90,7 @@ header h1 a{
     display: block;
 
 }
-.container p{
+.text p{
     position: absolute;
     top: 30%;
     left: 260px;
@@ -110,7 +125,7 @@ header h1 a{
 .courses{
     background-color: var(--thirdColor);    
 }
-.courses h2, .slider-container h2{
+.courses h2{
     padding: 50px 0 20px 250px;
     color: #fff;
     font-weight: lighter;
@@ -137,7 +152,6 @@ header h1 a{
 .pic img{
     width: 100%;
     border-radius: 6px 6px 0 0;
-
 }
 .info{
     padding: 24px 16px;
@@ -161,12 +175,111 @@ header h1 a{
     transition: 0.5s;
     cursor: pointer;
 }
-/*-----------------------------------------------*/
-.slider-container{
-    background-color: var(--secondColor);
+
+.tbcPartners {
+    width: 100%;
+    height: 360px;
+    background-color: rgb(43 43 43);
+    position: relative;
+}
+.tbcPartners h2 {
+    color: white;
+    font-weight: lighter;
+    padding: 50px 0px 20px 0;
+}
+.tbcPartnersContainer {
+    width: 66%;
+    margin: 0 auto;
 }
 
-/* -------------------------------------- */
+.slidesInnerContent {
+    display: flex;
+    align-items: center;
+    gap: 110px;
+    height: 100%;
+    margin: 100px ;
+
+}
+.slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    height: 70%;
+    align-self: center;
+
+}
+
+
+.slider button {
+    position: absolute;
+    font-size: 50px;
+    color: #f5f5f5;
+    border: none;
+    background: none;
+    transition: color 0.3s ease-in-out;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider button:hover {
+    color: #a9a9a9;
+    cursor: pointer;
+}
+
+.PrevArrow {
+    left: 140px;
+    position: absolute;
+}
+
+.NextArrow {
+    right: 140px;
+}
+
+.slidesInnerContent figure {
+    display: none;
+}
+
+figure.displaySlide {
+    display: block;
+    animation: fade 0.8s ease-in-out;
+}
+
+.dots {
+    cursor: pointer;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.dots span {
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+.slideImg{
+    height: 80px;
+    width: 250px;
+    margin-top: -60px;
+}
+.slideImg img{
+    height: 100%;
+    width: 100%;
+}
+
 .questions-container{
     background-color: var(--thirdColor);
     padding: 50px 300px;  
@@ -222,26 +335,12 @@ header h1 a{
 
 .line{
     height: 0.6px;
-    width: 950px;
+    width: 100%;
     background-color: #635e5e;
     margin-top: 30px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*----------------------- footer------------------------- */
+/*----------------------- footer code------------------------- */
 footer{
     width: 100%;
     height: 230px;
@@ -289,4 +388,183 @@ footer{
 }
 .chat p{
     color: #fff;
+}
+
+/* -------------------media query--------------------- */
+
+
+@media only screen and (max-width: 1024px) {
+    header{
+        padding: 10px 150px;
+    }
+    .text p{
+        left: 160px;
+    }
+    .text-container,
+    .courses h2,
+    .grid-container{
+        padding-left: 150px;
+    }
+    .text-container p:first-child {
+        font-size: 24px;
+        width: 750px;
+    }
+    .box{
+        width: 200px;
+        height: 350px;
+    }
+    .pic{
+        width: 198px;
+    }
+    .info p{
+        font-size: 14px;
+    }
+    .tbcPartners h2{
+        margin-left: -20px;
+    }
+    .PrevArrow {
+        left: 40px;
+        position: absolute;
+    }
+    .NextArrow {
+        right: 40px;
+    }
+    .slideImg{
+        height: 50px;
+        width: 180px;
+        margin-top: -60px;
+    }    
+    .questions-container{
+        padding: 50px 150px;  
+    }
+    footer{
+        padding: 150px;
+    }
+
+}
+
+@media only screen and (max-width: 390px) {
+    header h1{
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        background-size: 100%;
+        /* margin-left: -140px; */
+    }
+    .burger{
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 16px;
+        cursor: pointer;
+    }
+    .burger-bar, .Xmark{
+        color: white;
+        font-size: 30px;
+    }
+    .block, .burger{
+        display: block;
+    }
+    .none, .navItems{
+        display: none;
+    }
+    .display{
+        display: block;
+        align-items: flex-end;
+
+    }
+    .showNav{
+        height: 200px;
+    }
+    .nav{
+        line-height: 2;
+        margin-top: 30px;
+    }
+    .navItems a{
+        font-size: 14px;
+    }
+    .navItems{
+        flex-direction: column;
+    }
+    header h1 a{
+        margin-left: -15px;
+        display: block;
+        width: 150px;
+        height: 50px;
+    }
+    
+    .container{
+        width: 130%;
+        height: 200px;
+        left: -50px;
+    }
+    .text p{
+        font-size: 18px;
+        left: 14%;
+        top: 20%;
+    }
+    .text-container{
+        padding: 150px 10px;
+    }
+    .text-container p:first-child{
+        font-size: 16px;
+        width: 350px;
+    }
+    .text-container p:nth-child(2){
+        font-size: 14px;
+    }
+    .grid-container{
+        grid-template-columns: 1fr;
+        padding-left: 80px;
+    }
+    .questions-container{
+        padding: 50px 20px;  
+    }
+    .courses h2{
+        padding-left: 20px;
+        font-size: 20px;
+    }
+    .tbcPartners h2{
+        margin-left: -52px;
+        font-size: 20px;
+    }
+    .q-c-header{
+        gap: 60px;
+    }
+    .q-c-header h2{
+        font-size: 20px;
+    }
+    .q-c-header p{
+        font-size: 16px;
+    }
+    .question h3{
+        font-size: 16px;
+    }
+    .answer p{
+        font-size: 12px;
+    }
+    footer{
+        padding: 10px;
+    }
+    .tbcLogo{
+        width: 100px;
+        height: 50px;
+    }
+    .tbcLogo img{
+        width: 100%;
+    }
+    .rules p{
+        font-size: 12px;
+    }
+    .logos img{
+        width: 30px;
+    }
+    .chat{
+        width: 100px;
+        height: 30px;
+        padding:  6px 12px;
+    }
+    .chat p{
+        font-size: 12px;
+    }
 }

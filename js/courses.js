@@ -1,3 +1,5 @@
+import { gridContainer } from "./constants.js";
+
 const photoSource = [
     'img/1.webp','img/2.webp','img/3.webp','img/4.webp','img/5.webp','img/6.webp','img/7.webp','img/8.webp','img/9.webp',
 ];
@@ -5,8 +7,6 @@ const photoSource = [
 const textSource = [
     'iOS Development', 'React', 'Intro to Python', 'Advanced Python', 'Advanced Cybersecurity Course', 'ToT - Training of Trainers', 'Blockchain', 'DevOps', 'Information Security Governance'
 ];
-
-const gridContainer = document.getElementById('gridContainer') 
 
 
 for (let i = 0; i < photoSource.length; i++) {
