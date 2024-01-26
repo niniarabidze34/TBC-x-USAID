@@ -1,3 +1,5 @@
+// მოცემულ ფაილში შექმნილია ერთგვარი შაბლონი საიტზე მოცემული კურსების შესაქმნელად
+
 import { gridContainer } from "./constants.js";
 
 const photoSource = [

@@ -1,3 +1,5 @@
+// ფუნქცია უმკლავდება საიტის მობილური ვერსიისას ჰედერის გამოჩენა-დახურვის კონტროლს
+
 import { navItems, burgerBar,Xmark } from "./constants.js";
 
 function openNav() {

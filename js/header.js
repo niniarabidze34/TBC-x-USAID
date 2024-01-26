@@ -1,3 +1,5 @@
+// მოცემულ ფუნქვია უზრუნველყოფს, რომ ჰედერი საიტის დაბლა ჩამოსქროლვის დროს გახდეს გამჭვირვალე
+
 import { header } from "./constants.js";
 
 const sticky = header.offsetTop;

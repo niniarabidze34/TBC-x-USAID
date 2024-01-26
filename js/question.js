@@ -1,3 +1,5 @@
+// მოცემული ფუნქცია უზრუნველყოფს კითხაზე პასუხების გამოჩენა-დამალვას
+
 import { question1, question2, question3 } from "./constants.js";
 
 
